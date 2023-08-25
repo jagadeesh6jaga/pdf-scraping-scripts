@@ -48,7 +48,9 @@ def generatejpgURLS(from_date,to_date ,lang):
             soup = BeautifulSoup(html_document, 'html.parser')
             site_json=json.loads(soup.text)
             #printing for entrezgene, do the same for name and symbol
-            jpg_urls = [d.get('XHighResolution') for d in site_json if d.get('XHighResolution')]
+            jpg_urls = [d.get('HighResolution') for d in site_json if d.get('HighResolution')]
+            jpg_urls = [url.replace('_mr','') for url in jpg_urls]
+
             Final_urls.extend(jpg_urls)        
         # print(Final_urls)
         with open(f'URLS/{lang}/Patrika_{year}_{month}_{day}.txt', 'w+') as f:
