@@ -26,3 +26,15 @@
   ( example if we provoid the from_date as  01/01/2023 and to_date as  15/01/2023  , it will process the date from  01/01/2023 to 14/01/2023  it will exclude the 15/01/2023)
 
 
+
+#### 4) anandabazar
+
+python newspaperScrapper.py anandabazar from_date to_date(EX:  python newspaperScrapper.py anandabazar 2023-08-24 2023-08-26)
+
+#### 5) vijayvani
+
+python newspaperScrapper.py vijayvani from_date to_date  (EX : python newspaperScrapper.py vijayvani 2023-08-24 2023-08-25)
+
+##### Note
+
+* in 4 and 5 we should pass the date format as 'yyyy-mm-dd'
