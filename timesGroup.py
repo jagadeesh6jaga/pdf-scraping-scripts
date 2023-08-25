@@ -73,12 +73,12 @@ def generatejpgURLS(from_date,to_date ,lang):
 def downloadImages(from_date,to_date,lang):
   alldates = getAllDates(from_date,to_date)
   for date in alldates:
-    Final_urls =[]
     day = '{:02d}'.format(date.day)
     month = '{:02d}'.format(date.month)
     year = str(date.year)
     file = open(f'URLS/{lang}/TimesGroup_{year}_{month}_{day}.txt','r')
     url_list = file.readlines()
+    file.close()
     for url in url_list:
       try:
         # print(url)
@@ -90,8 +90,6 @@ def downloadImages(from_date,to_date,lang):
           f.close()
       except:
         pass
-
-    file.close()
   return True
 
 
