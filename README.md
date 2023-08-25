@@ -7,4 +7,6 @@
 
 -> python3 esakal.py from_date to_date  (EX : python3 esakal.py '24/12/2022' '30/12/2022'
 
-#### Note :Here  date format should be in 'dd/mm/yyyy' format
+#### Note :
+* Here  date format should be in 'dd/mm/yyyy' format
+* it will exclude the to_date
